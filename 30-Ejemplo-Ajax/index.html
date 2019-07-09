@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <center>
+        <h1>Ejemplo Ajax</h1>
+    </center>
+    <input type="text" id="valor1">
+    <input type="text" id="valor2">
+    <input type="submit" value="Sumar" id="ejecutar">
+
+    <h3 id="resultado"></h3>       
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#ejecutar').click(function (){
+                sumar($('#valor1').val(),$('#valor2').val());             
+            });
+            function sumar(val1,val2){
+                var parametros = {
+                    "val1":val1,
+                    "val2":val2
+                }
+                $.ajax({
+                    data:parametros,
+                    url:"suma.php",
+                    type:"post",
+                    before$end:function(){
+                        console.log("Se está procesando tu petición");                        
+                    }
+                })
+                .done(function(data){
+                    $('#resultado').text(data);                    
+                });                
+            }
+        });       
+    </script>    
+</body>
+</html>

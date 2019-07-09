@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>       
+    <h1 class="saludo">Hola a Toditos :D</h1>
+    <p id="parrafo" class="saludo">Saludos a todos</p>
+    <img id="goo" src="../img/goo.png" width="400" alt="">
+    <button id="btn1">Mostrar</button>
+    <button id="btn2">Ocultar</button>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // $('#btn1').click(function () {
+            //     $('#goo').slideDown(3000);                
+            // });
+            // $('#btn2').click(function () {
+            //     $('#goo').slideUp(3000);                
+            // });
+
+            //difumina la imagen hasta ocultarla
+            // $('#btn1').click(function () {
+            //     $('#goo').fadeIn(3000);                
+            // });
+            // $('#btn2').click(function () {
+            //     $('#goo').fadeOut(3000);                
+            // });
+
+            
+            $('#btn1').click(function () {
+                $('#goo').animate({height: "900px"},3000);                
+            });
+            $('#btn2').click(function () {
+                $('#goo').animate({width: "900px"},3000);                
+            });            
+        });
+       
+    </script>    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <label for="">Número de presiones <span>0</span></label>       
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#input').keydown(function(){
+                $('#input').css({"background-color":"pink"});
+            });
+
+            var i = 0;
+            $('#input').keypress(function(){
+                $('span').text(i += 1);
+            });
+
+            $('#input').keyup(function(){
+                $('#input').css({"background-color":"white"});
+            });                   
+        });       
+    </script>    
+</body>
+</html>

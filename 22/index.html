@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <center>
+        <h1>Hola a Todos</h1>
+        <ol>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+        </ol>
+        <button id="exe">Ejecutar</button>
+    </center>       
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/e622d3b53e.js"></script>
+    <script>
+        $(function () {
+            $('#exe').click(function () {
+                // append agrega un nuevo elemento al final
+                // $('ol').append('<li>nuevo elemento</>');
+
+                // prepend agrega un nuevo elemento al principio
+                // $('ol').prepend('<li>nuevo elemento</>');
+
+                //mueve el primer elemento al final
+                // $('ol').append($('ol li:first'));
+
+                //mueve el ultimo elemento al principio
+                // $('ol').prepend($('ol li:last'));
+
+                // Va agregando los elementos a h1
+                // var clon = $('ol li:last').text();
+                // muestra el ultimo elemento en consola
+                // console.log(clon);
+                // $('h1').append(clon);
+                // $('ol').prepend($('ol li:last'));
+
+                //va eliminando los elementos                
+                $('ol li:last').remove();
+
+                
+
+
+            });                  
+        });       
+    </script>    
+</body>
+</html>

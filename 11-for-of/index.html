@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Jquery</title>
+</head>
+<body>       
+    <h1 class="saludo">Hola a Toditos :D</h1>
+    <p id="parrafo" class="">Saludos a todos</p>
+    <div>wiii</div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        //Iterar elementos con For of
+        $(function () {
+            //Muestra los numeros del arreglo,hace lo mismo
+            //que el for anterior
+            // var numbers = [1,4,6,2];
+            // for(let num of numbers){
+            //     console.log(num);
+            // }
+
+            var colors = [{
+                "colors":[{
+                    "colorName":"red",
+                    "hexValue":"#f00"
+                },
+                {
+                    "colorName":"green",
+                    "hexValue":"#0f0"
+                },
+                {
+                    "colorName":"red",
+                    "hexValue":"#00f"
+                }]
+            }];
+            for(let color of colors){
+                console.log(color);
+            }          
+        });
+        
+    </script>    
+</body>
+</html>

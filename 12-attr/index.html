@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>       
+    <h1 class="saludo">Hola a Toditos :D</h1>
+    <p id="parrafo" class="saludo">Saludos a todos</p>
+    <img id="goo" src="../img/goo.png" alt="">
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //cambia el tamaño de la imagen al cargar la pagina
+            // $('#goo').attr('width',300);
+
+            //cambia la imagen al dar clic
+            $('#goo').click(function () {
+                //$('#goo').attr('src','../img/flor.jpg');
+
+                //remueve el source al darle clic
+                //esto provoca que tmbn la imagen desaparesca
+                $('#goo').removeAttr('src');                
+            });
+        });
+    </script>    
+</body>
+</html>

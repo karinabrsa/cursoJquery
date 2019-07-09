@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <center>
+        <h1>JSON.Parse</h1>
+    </center>       
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/e622d3b53e.js"></script>
+    <script>
+        $(function(){
+            //var obj = JSON.parse('{"name":"Luis","lastname":"Celaya"}');
+
+            var cad = '{"name":"Luis","lastname":"Celaya","edad":22}';
+            var obj = JSON.parse(cad);
+            console.log(obj.name+" "+obj.lastname);
+            console.log(obj.edad)
+        });       
+    </script>    
+</body>
+</html>

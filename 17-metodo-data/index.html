@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <center>
+        <h1><i class="fa fa-volume-up" id="icon"></i></h1>
+        <ul id="colors">
+            <li>Orange</li>
+            <li>Purple</li>
+            <li>White</li>
+        </ul>
+    </center>       
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/e622d3b53e.js"></script>
+    <script>
+        $(function () {
+            // $('#icon').mousedown(function(){
+            //     $('#icon').data('status','cambiando');
+            //     $('#icon').addClass('fa-volume-off').removeClass('fa-volume-up');
+            //     console.log($('#icon').data('status'));
+            // });
+            // $('#icon').mouseup(function(){
+            //     $('#icon').data('status','cambió');
+            //     $('#icon').addClass('fa-volume-up').removeClass('fa-volume-off');
+            //     console.log($('#icon').data('status'));
+            // });
+
+            //cambia el color del icono al hacer click
+            // $('#icon').data('atrib',{nombre:'fa-volume-off',color:'pink'});
+            // var icon = $('#icon').data('atrib');
+            // console.log(icon.nombre);
+            // $('#icon').mousedown(function(){
+            //     $('#icon').addClass(icon.nombre).removeClass('fa-volume-up');
+            //     $('#icon').css('color',icon.color);
+            // });
+            // $('#icon').mouseup(function(){
+            //     $('#icon').addClass('fa-volume-up').removeClass(icon.nombre);
+            //     $('#icon').css('color','black');
+            // });
+
+            $('#colors li').each(function (index,value) {
+                $('#colors').data('nombre',value);
+                console.log($('#colors').data('nombre'));                                
+            });
+            $('#icon').data('atrib',{nombre:'fa-volume-off',color:'pink'});
+            var icon = $('#icon').data('atrib');
+            console.log(icon.nombre);
+            $('#icon').mousedown(function(){
+                $('#icon').addClass(icon.nombre).removeClass('fa-volume-up');
+                $('#icon').css('color',icon.color);
+            });
+            $('#icon').mouseup(function(){
+                $('#icon').addClass('fa-volume-up').removeClass(icon.nombre);
+                $('#icon').css('color','black');
+            });                  
+        });       
+    </script>    
+</body>
+</html>

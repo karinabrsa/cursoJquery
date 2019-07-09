@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>       
+    <h1 class="saludo">Hola a Toditos :D</h1>
+    <p id="parrafo" class="saludo">Saludos a todos</p>
+    <img id="goo" src="../img/goo.png" alt="">
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#goo').click(function () {
+                //funciona igual que el attr para cambiar alto y ancho
+                // $('#goo').width(300).height(100);
+
+                //guarda en una variable el ancho y al
+                //dar clic lo muestra
+                // var w = $('#goo').width();
+                // alert(w);
+
+                var h = $('#goo').height();
+                alert(h);
+                var hn = $('#goo').height(400);
+                aler(hn);
+
+            });
+        });
+    </script>    
+</body>
+</html>

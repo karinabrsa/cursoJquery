@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <center>
+        <h1><i class="fa fa-volume-up" id="icon"></i></h1>
+    </center>       
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/e622d3b53e.js"></script>
+    <script>
+        $(function () {
+            //al dar click cambia el icono
+            // $('#icon').mousedown(function(){
+            //     $('#icon').addClass('fa-volume-off').removeClass('fa-volume-up');
+            // });
+            // $('#icon').mouseup(function(){
+            //     $('#icon').addClass('fa-volume-up').removeClass('fa-volume-off');
+            // });
+
+            //cambia el icono al poner o quitar el cursor
+            $('#icon').mouseover(function(){
+                $('#icon').addClass('fa-volume-off').removeClass('fa-volume-up');
+            });
+            $('#icon').mouseleave(function(){
+                $('#icon').addClass('fa-volume-up').removeClass('fa-volume-off');
+            });                   
+        });       
+    </script>    
+</body>
+</html>

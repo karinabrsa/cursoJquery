@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <style type="text/css">
+    .ocultar{
+        display: none;
+    }        
+    </style>
+    <h1 class="saludo">Hola a Toditos :D</h1>
+    <p id="parrafo" class="">Saludos a todos</p>
+    <div>wiii</div>
+    <div></div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // show y hide
+        $(function () {
+            $('.saludo').css({'background-color':'pink','text-align':'center'});
+            if ($('#parrafo').hasClass('saludo')) {
+                alert('si tiene la clase saludo');
+                //si encuentra la clase entonces que muestre el
+                //parrafo con una velocidad de 3segundos
+                $('#parrafo').show(3000);      
+            }
+            //Si no tiene la clase saludo entonces le agrega la
+            //clase hola al div
+            else{
+                alert('no tiene la clase saludo');
+                $('div').hide(3000);
+            }            
+        });
+
+    </script>    
+</body>
+</html>

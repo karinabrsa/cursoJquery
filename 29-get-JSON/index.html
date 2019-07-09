@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <center>
+        <h1>Get JSON</h1>
+        <input type="submit" value="Ejecutar" id="ejecutar">
+    </center>       
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#ejecutar').click(function (){
+                $.getJSON('ejemplo.php',{
+                    nombre:"Luis",
+                    metodo:"Get"
+                },function(data){
+                    $.each(data,function(i,value){
+                        console.log(i+" "+value);
+                    });                    
+                });                
+            });
+        });       
+    </script>    
+</body>
+</html>

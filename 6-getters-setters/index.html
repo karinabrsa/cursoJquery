@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <h1 class="saludo">Hola a Toditos :D</h1>
+    <p id="parrafo">Saludos a todos</p>
+    <div>wiii</div>
+    <div></div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //se declaro una variable y se obtuvo el valor de 'saludo'
+            // var s = $('.saludo').html();
+            
+            // attr permite obtener y asignar un valor
+            // se obtiene del h1 el nombre de su clase y lo muestra
+            // var s = $('h1').attr('class');
+            //se le asigna al h1 un id llamado hola
+            var s = $('h1').attr('id','hola');
+            //alert(s);            
+        });
+    </script>    
+</body>
+</html>

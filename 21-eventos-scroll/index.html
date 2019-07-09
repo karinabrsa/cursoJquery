@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<!-- se pone una altura para poder scrollear -->
+<body style="height: 1500px">
+    <center>
+        <h1>Hola Codigo Facilito</h1>
+        <button style="margin-top: 1400px" id="up">UP</button>
+    </center>       
+    <script src="../js/jquery.min.js"></script>
+    <!-- <script src="https://use.fontawesome.com/e622d3b53e.js"></script> -->
+    <script>
+        $(function() {
+
+            $('#up').click(function(){
+                $('html,body').animate({scrollTop:0},1000);
+            });
+
+            //Manda un mensaje cuando el escroll suba o baje de los 100px
+            // $(window).scroll(function () {
+            //     if($(this).scrollTop()>100){
+            //         console.log('hola Scroll');
+            //     }else{
+            //         console.log('no scroll');
+            //     }
+            // });            
+            
+              
+        });       
+    </script>    
+</body>
+</html>

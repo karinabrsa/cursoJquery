@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Jquery</title>
+</head>
+<body>
+    <center>
+        <h1>Plugin Jquery </h1>
+        <!-- <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe> -->
+
+        <!-- No funciono,asi que le agrego una clase -->
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/WRDEcHT5Hf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </center>
+    <div style="height: 400px">im a space</div>
+    <div style="height: 400px">im a space</div>
+    <div style="height: 400px">im a space</div>
+    <div style="height: 400px">im a space</div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/videoscroll.js"></script>
+    <script>
+        $(function(){
+            //aparte de la clase tmbn se inicializa el plugin
+            $('.video').vscroll();
+        });       
+    </script>    
+</body>
+</html>
